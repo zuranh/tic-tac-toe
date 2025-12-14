@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <input type="checkbox" id="dark-toggle" hidden>
@@ -27,10 +27,10 @@
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="tictactoe.html">Tic Tac Toe</a></li>
-
       </ul>
     </nav>
   </header>
+
   <div class="page">
     <aside class="sidebar">
       <h1>Semantic Web Primer</h1>
@@ -46,29 +46,39 @@
         </ol>
       </nav>
     </aside>
+
     <main>
+      <a href="../index.html" class="back-button">← Back to Project Hub</a>
       <article>
-        <h2>Contact</h2>
-        <p>If you have questions about this project or want to get in touch, use the details below.</p>
-        <section aria-labelledby="contact-info">
-          <h3 id="contact-info">Contact Information</h3>
-          <ul>
-            <li><strong>Name:</strong> Carlos Harb</li>
-            <li><strong>Student ID:</strong> 202401891</li>
-            <li><strong>Phone:</strong> <a href="tel:+96170521998">+961 70 521 998</a></li>
-            <li><strong>Email:</strong> <a href="mailto:carlosmaroun.bounahedharb@net.usek.edu.lb">carlosmaroun.bounahedharb@net.usek.edu.lb</a></li>
-          </ul>
-        </section>
-         <div class="back-button-container">
-          <a href="../index.html" class="back-button">← Back to Project Hub</a>
+        <h2>Play Tic Tac Toe</h2>
+        <p>This simple game was built with the same HTML, CSS, and JavaScript used across the site. Take turns placing <strong>X</strong> and <strong>O</strong> until someone wins or the board fills up.</p>
+        <div class="tic-tac-toe">
+          <p id="game-status">Player X's turn</p>
+          <div class="tic-grid" role="grid" aria-label="Tic Tac Toe board">
+            <button class="tic-cell" data-cell="0" aria-label="Top left"></button>
+            <button class="tic-cell" data-cell="1" aria-label="Top center"></button>
+            <button class="tic-cell" data-cell="2" aria-label="Top right"></button>
+            <button class="tic-cell" data-cell="3" aria-label="Middle left"></button>
+            <button class="tic-cell" data-cell="4" aria-label="Middle center"></button>
+            <button class="tic-cell" data-cell="5" aria-label="Middle right"></button>
+            <button class="tic-cell" data-cell="6" aria-label="Bottom left"></button>
+            <button class="tic-cell" data-cell="7" aria-label="Bottom center"></button>
+            <button class="tic-cell" data-cell="8" aria-label="Bottom right"></button>
+          </div>
+          <div class="tic-actions">
+            <button id="reset-game" class="reset-btn">Reset</button>
+          </div>
         </div>
       </article>
     </main>
   </div>
-    <footer>
+
+  <footer>
     <p class="disclaimer">Disclaimer: Educational project for Web Design coursework; AI tools assisted with research summaries and wording.</p>
     <p><small>Last updated: 14 December 2025.</small></p>
     <p><small>© 2025 | All Rights Reserved</small></p>
   </footer>
+
+  <script src="tictactoe.js"></script>
 </body>
 </html>

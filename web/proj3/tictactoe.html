@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="checkbox" id="dark-toggle" hidden>
+  <label for="dark-toggle" class="dark-mode-toggle">🌙</label>
+  <header class="topnav">
+    <nav>
+      <ul>
+        <li>
+          <details>
+            <summary>Related Topics ▾</summary>
+            <ul class="dropdown-content">
+              <li><a href="css-history.html">CSS Extra Info</a></li>
+              <li><a href="js-history.html">JS Extra Info</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tictactoe.html">Tic Tac Toe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page">
+    <aside class="sidebar">
+      <h1>Semantic Web Primer</h1>
+      <nav>
+        <ol>
+          <li><a href="index-css.html">Home</a></li>
+          <li><a href="history-css.html">History of the Web</a></li>
+          <li><a href="security-css.html">Security on the Web</a></li>
+          <li><a href="mobile-first-css.html">Mobile-First Development</a></li>
+          <li><a href="stats-css.html">Internet Stats</a></li>
+          <li><a href="references-css.html">References</a></li>
+          <li><a href="arabic-css.html">الذكاء الاصطناعي</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <main>
+      <a href="../index.html" class="back-button">← Back to Project Hub</a>
+      <article>
+        <h2>Play Tic Tac Toe</h2>
+        <p>This simple game was built with the same HTML, CSS, and JavaScript used across the site. Take turns placing <strong>X</strong> and <strong>O</strong> until someone wins or the board fills up.</p>
+        <div class="tic-tac-toe">
+          <p id="game-status">Player X's turn</p>
+          <div class="tic-grid" role="grid" aria-label="Tic Tac Toe board">
+            <button class="tic-cell" data-cell="0" aria-label="Top left"></button>
+            <button class="tic-cell" data-cell="1" aria-label="Top center"></button>
+            <button class="tic-cell" data-cell="2" aria-label="Top right"></button>
+            <button class="tic-cell" data-cell="3" aria-label="Middle left"></button>
+            <button class="tic-cell" data-cell="4" aria-label="Middle center"></button>
+            <button class="tic-cell" data-cell="5" aria-label="Middle right"></button>
+            <button class="tic-cell" data-cell="6" aria-label="Bottom left"></button>
+            <button class="tic-cell" data-cell="7" aria-label="Bottom center"></button>
+            <button class="tic-cell" data-cell="8" aria-label="Bottom right"></button>
+          </div>
+          <div class="tic-actions">
+            <button id="reset-game" class="reset-btn">Reset</button>
+          </div>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    <p>Ai Assisted in gathering information and statistic about the given topic as well as to explain html concepts and syntax</p>
+    <p><small>Last updated: 21 September 2025.</small></p>
+  </footer>
+
+  <script>
+    const cells = Array.from(document.querySelectorAll('.tic-cell'));
+    const statusEl = document.getElementById('game-status');
+    const resetBtn = document.getElementById('reset-game');
+    const wins = [
+      [0, 1, 2], [3, 4, 5], [6, 7, 8],
+      [0, 3, 6], [1, 4, 7], [2, 5, 8],
+      [0, 4, 8], [2, 4, 6]
+    ];
+
+    let board = Array(9).fill('');
+    let player = 'X';
+
+    function updateStatus(text) {
+      statusEl.textContent = text;
+    }
+
+    function resetGame() {
+      board = Array(9).fill('');
+      player = 'X';
+      cells.forEach(cell => {
+        cell.textContent = '';
+        cell.disabled = false;
+        cell.classList.remove('win');
+      });
+      updateStatus("Player X's turn");
+    }
+
+    function checkWinner() {
+      for (const combo of wins) {
+        const [a, b, c] = combo;
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+          combo.forEach(index => cells[index].classList.add('win'));
+          return board[a];
+        }
+      }
+      return board.every(mark => mark) ? 'draw' : null;
+    }
+
+    function handleMove(event) {
+      const cell = event.target;
+      const index = Number(cell.dataset.cell);
+      if (board[index]) return;
+
+      board[index] = player;
+      cell.textContent = player;
+
+      const outcome = checkWinner();
+      if (outcome) {
+        if (outcome === 'draw') {
+          updateStatus("It's a draw!");
+        } else {
+          updateStatus(`Player ${outcome} wins!`);
+        }
+        cells.forEach(btn => btn.disabled = true);
+        return;
+      }
+
+      player = player === 'X' ? 'O' : 'X';
+      updateStatus(`Player ${player}'s turn`);
+    }
+
+    cells.forEach(cell => cell.addEventListener('click', handleMove));
+    resetBtn.addEventListener('click', resetGame);
+    resetGame();
+  </script>
+</body>
+</html>

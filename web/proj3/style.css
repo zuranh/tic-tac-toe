@@ -528,3 +528,87 @@ body.dark #events-list .topic-card {
 #dark-toggle:checked ~ .page .course-link {
   color: #f0dca7;
 }
+
+/* === Tic Tac Toe Game === */
+.tic-tac-toe {
+  max-width: 420px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.tic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.tic-cell {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 2px solid #8b5e34;
+  border-radius: 10px;
+  background: #f8f4ed;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.tic-cell:hover {
+  transform: translateY(-2px);
+  background: #f1e4d8;
+}
+
+.tic-cell.win {
+  background: #c8f5c1;
+  border-color: #3a8f3a;
+}
+
+.tic-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.reset-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #8b5e34;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.reset-btn:hover {
+  background: #704726;
+  transform: translateY(-1px);
+}
+
+#dark-toggle:checked ~ .page .tic-tac-toe {
+  background: #1f1f1f;
+  border-color: #333;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+#dark-toggle:checked ~ .page .tic-cell {
+  background: #2c2c2c;
+  border-color: #f0dca7;
+  color: #f5f5f5;
+}
+
+#dark-toggle:checked ~ .page .tic-cell.win {
+  background: #315532;
+  border-color: #6bd36b;
+}
+
+#dark-toggle:checked ~ .page .reset-btn {
+  background: #f0dca7;
+  color: #1a1a1a;
+}

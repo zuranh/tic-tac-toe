@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Extra Info</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="dark-toggle" hidden>
+  <label for="dark-toggle" class="dark-mode-toggle">🌙</label>
+
+  <!-- Top Navigation -->
+ <header class="topnav">
+    <nav>
+      <ul>
+        <li>
+          <details>
+            <summary>Related Topics ▾</summary>
+            <ul class="dropdown-content">
+              <li><a href="css-history.html">CSS Extra Info</a></li>
+              <li><a href="js-history.html">JS Extra Info</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+         <li><a href="events.html">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page">
+    <aside class="sidebar">
+      <h1>Semantic Web Primer</h1>
+      <nav>
+        <ol>
+          <li><a href="index-css.html">Home</a></li>
+          <li><a href="history-css.html">History of the Web</a></li>
+          <li><a href="security-css.html">Security on the Web</a></li>
+          <li><a href="mobile-first-css.html">Mobile-First Development</a></li>
+          <li><a href="stats-css.html">Internet Stats</a></li>
+          <li><a href="references-css.html">References</a></li>
+          <li><a href="arabic-css.html">الذكاء الاصطناعي</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <main>
+        <a href="../index.html" style="background:#8b5e34;color:#fff;padding:0.6rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:600;">← Back to Project Hub</a>
+        </p>
+      <article>
+        <h2>JavaScript Extra Information</h2>
+        <p>This section explains the origins of JavaScript and some of its core programming concepts.</p>
+
+        <section id="js-card" class="topic-card">
+          <h3>JavaScript Topics</h3>
+          <p class="card-intro">Understand how JavaScript started and how key operations like increments work.</p>
+
+          <details class="card-dropdown">
+            <summary>JavaScript History</summary>
+            <div class="card">
+              <p>When Brendan Eich was employed at Netscape in 1995, he developed JavaScript in just ten days. In an attempt to capitalize on Java’s then-current popularity, the language changed its name from Mocha to LiveScript before finally settling on JavaScript.</p>
+
+              <p>The language was created to add interactive behavior to web pages that HTML and CSS couldn’t handle on their own. Early on, there were significant compatibility problems because every browser had its own JavaScript engine. To fix that, ECMA International standardized the language in 1997 under the name ECMAScript.</p>
+
+              <p>JavaScript began as a simple scripting language for browsers, but it has evolved into one of the most powerful and flexible programming languages in the world. Today, it powers websites, mobile apps, desktop software, and back-end servers through technologies like Node.js.</p>
+            </div>
+          </details>
+
+          <details class="card-dropdown">
+            <summary>Post-Increment and Pre-Increment</summary>
+            <div class="card">
+              <p>The increment operator (<code>++</code>) in JavaScript increases a variable’s value by one — but the timing depends on where you place it.</p>
+
+              <p><strong>Post-increment (<code>x++</code>):</strong> increases the value after the expression is evaluated. For example:</p>
+              <pre><code>let x = 5;
+let y = x++;
+// y = 5, x = 6
+</code></pre>
+
+              <p>Here, <code>y</code> receives the original value (5) before <code>x</code> is increased to 6.</p>
+
+              <p><strong>Pre-increment (<code>++x</code>):</strong> increases the value before evaluation. Example:</p>
+              <pre><code>let x = 5;
+let y = ++x;
+// y = 6, x = 6
+</code></pre>
+
+              <p>In this case, <code>x</code> is incremented first, and the updated value (6) is assigned to <code>y</code>. Understanding this distinction helps avoid subtle logic errors in JavaScript programs.</p>
+            </div>
+          </details>
+        </section>
+
+        <p style="margin-top:2rem;">
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    <p>AI assisted in formatting and writing, but content was reviewed and humanized by Carlos Harb.</p>
+    <p><small>Last updated: 21 September 2025.</small></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Extra Info</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="dark-toggle" hidden>
+  <label for="dark-toggle" class="dark-mode-toggle">🌙</label>
+
+  <!-- Top Navigation -->
+  <header class="topnav">
+    <nav>
+      <ul>
+        <li>
+          <details>
+            <summary>Related Topics ▾</summary>
+            <ul class="dropdown-content">
+              <li><a href="css-history.html">CSS Extra Info</a></li>
+              <li><a href="js-history.html">JS Extra Info</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="events.html">Events</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page">
+
+    <aside class="sidebar">
+      <h1>Semantic Web Primer</h1>
+      <nav>
+        <ol>
+          <li><a href="index-css.html">Home</a></li>
+          <li><a href="history-css.html">History of the Web</a></li>
+          <li><a href="security-css.html">Security on the Web</a></li>
+          <li><a href="mobile-first-css.html">Mobile-First Development</a></li>
+          <li><a href="stats-css.html">Internet Stats</a></li>
+          <li><a href="references-css.html">References</a></li>
+          <li><a href="arabic-css.html">الذكاء الاصطناعي</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <main>
+
+      <a href="../index.html"
+        style="background:#8b5e34;color:#fff;padding:0.6rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:600;">
+        ← Back to Project Hub
+      </a>
+
+      <article>
+        <h2>CSS Extra Information</h2>
+        <p>
+          This section provides additional insights into how CSS evolved and how its structure works behind the scenes.
+        </p>
+
+        <section id="css-card" class="topic-card">
+          <h3>CSS Topics</h3>
+          <p class="card-intro">
+            Learn about the history and the foundational principles of CSS.
+          </p>
+
+          <details class="card-dropdown">
+            <summary>CSS History</summary>
+            <div class="card">
+              <p>
+                In 1994, while collaborating with Tim Berners-Lee at CERN, Håkon Wium Lie first proposed CSS, short for
+                Cascading Style Sheets. The web was primarily text-based at the time, and every browser displayed pages
+                differently. Structure was controlled by HTML, but there was no visual design standard, so everything
+                appeared somewhat different everywhere.
+              </p>
+              <p>
+                The foundation for elements like fonts, colors, and spacing was laid by the 1996 release of CSS1, the
+                first official version. While CSS3 (which really evolved into a collection of smaller "modules") brought
+                animations, gradients, and flexible layouts, CSS2 added additional layout options and media types a few
+                years later.
+              </p>
+              <p>
+                Today, CSS continues to evolve with new features like flexbox, grid, and custom properties, making it
+                more powerful and consistent across browsers. What started as a simple styling tool has grown into one
+                of the core languages of the modern web.
+              </p>
+            </div>
+          </details>
+
+          <details class="card-dropdown">
+            <summary>CSS Rules and Structure</summary>
+            <div class="card">
+              <p>
+                The browser is instructed by CSS rules on which elements to style and how. A selector and a declaration
+                block are the two primary components of every rule. The HTML element is the target of the selector, and
+                the styles enclosed in curly braces are defined by the declaration block.
+              </p>
+              <pre><code>p { color: #333; font-size: 16px; line-height: 1.5; }</code></pre>
+              <p>
+                The selector <code>p</code> in this example applies the styles to every paragraph element. Every
+                declaration, such as color or font-size, is made up of a property and a value, separated by a colon and
+                ending with a semicolon.
+              </p>
+              <p>
+                The cascade principle of CSS allows styles to be overridden by inline styles or more specific rules.
+                This flexibility lets developers fine-tune the appearance of content while keeping design separate from
+                the structure of HTML.
+              </p>
+            </div>
+          </details>
+
+        </section>
+
+        <p style="margin-top:2rem;"></p>
+      </article>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>
+      AI assisted in formatting and writing, but content was reviewed and humanized by Carlos Harb.
+    </p>
+    <p>
+      <small>Last updated: 21 September 2025.</small>
+    </p>
+  </footer>
+
+</body>
+</html>

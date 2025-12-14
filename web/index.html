@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Development Project Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background-color: #fcfbf8;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #8b5e34;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    .card {
+      background-color: #f2ede5;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      text-align: center;
+      width: 260px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #8b5e34;
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .card a:hover {
+      color: #704726;
+    }
+
+    .card p {
+      color: #444;
+      font-size: 0.95rem;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      background-color: #f2ede5;
+      width: 100%;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #1a1a1a;
+      transition: background-color 0.4s, color 0.4s;
+    }
+  </style>
+</head>
+<body>
+  <h1>Web Development Project Hub</h1>
+
+  <div class="projects">
+    <div class="card">
+      <a href="proj1/index.html">Project 1<br>(HTML Only)</a>
+      <p>Basic structure and content using pure HTML.</p>
+    </div>
+
+    <div class="card">
+      <a href="proj2/index-css.html">Project 2<br>(HTML + CSS)</a>
+      <p>Styled version with layout and design improvements.</p>
+    </div>
+     <div class="card">
+      <a href="proj3/index-js.html">Project 3-4<br>(with js)</a>
+      <p>schedule cv events</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Carlos Harb</p>
+  </footer>
+</body>
+</html>

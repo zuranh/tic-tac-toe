@@ -1,0 +1,180 @@
+<script defer src="cv.js"></script>
+<link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Professional CV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="dark-toggle" hidden>
+  <label for="dark-toggle" class="dark-mode-toggle">🌙</label>
+
+  <!-- Top Navigation -->
+  <header class="topnav">
+    <nav>
+      <ul>
+        <li>
+          <details>
+            <summary>Related Topics ▾</summary>
+            <ul class="dropdown-content">
+              <li><a href="css-history.html">CSS Extra Info</a></li>
+              <li><a href="js-history.html">JS Extra Info</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="schedule.html">Weekly Schedule</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+         <li><a href="events.html">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page">
+    <main>
+      <a href="../index.html" class="back-button">← Back to Project Hub</a>
+      <article class="cv-section" aria-label="Example CV template">
+        <header class="cv-header">
+          <h2>Carlos Harb</h2>
+          <p>Computer Engineering Student | Web Developer</p>
+          <p>Email: <a href="mailto:carlosmaround.bounahedharb@net.usek.edu.lb">carlosmaroun.bounahedharb@net.usek.edu.lb</a> | Phone: +961 70 521 998</p>
+        </header>
+
+        <section class="cv-block">
+          <h3>Education</h3>
+          <ul>
+            <li><strong>Holy Spirit University of Kaslik</strong> — B.E. in Computer Engineering (Expected 2027)</li>
+            <li>Relevant Coursework: Web Development, Networking, Electronics, Digital image processing</li>
+          </ul>
+        </section>
+
+        <section class="cv-block">
+          <h3>Experience</h3>
+          <ul>
+            <li><strong>Web Development Intern at Murex</strong> — Assisted in building and designing responsive websites.</li>
+            <li><strong>Student Assistant</strong> — Helped maintain lab systems.</li>
+          </ul>
+        </section>
+
+        <section class="cv-block">
+          <h3>Skills</h3>
+          <ul class="skills">
+            <li>HTML / CSS / JavaScript</li>
+            <li>Python, C, MATLAB</li>
+            <li>Networking & Routing Basics</li>
+            <li>Git</li>
+          </ul>
+        </section>
+
+        <section class="cv-block">
+          <h3>Projects & Certifications</h3>
+          <ul>
+            <li>Semantic Web Research Website (Project 2)</li>
+            <li>Responsive Design Portfolio (2024)</li>
+          </ul>
+        </section>
+
+        <section class="cv-download">
+          <a href="../assets/CarlosHarbCV.pdf" download class="download-btn">⬇ Download CV (PDF)</a>
+        </section>
+      </article>
+
+      <!-- ======= CV Entry Form & Preview (interactive) ======= -->
+      <section class="topic-card" aria-labelledby="cv-entry-heading">
+        <h2 id="cv-entry-heading">CV Data Entry (Use this to generate your own CV)</h2>
+
+        <form id="cv-form" class="cv-form" novalidate>
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="full-name">Full Name *</label>
+            <input id="full-name" name="fullName" type="text" required>
+
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required>
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel">
+
+            <label for="summary">Professional Summary</label>
+            <textarea id="summary" name="summary" rows="3" placeholder="Brief summary..."></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Education</legend>
+            <label for="edu-1">Education (one per line: degree — institution — year)</label>
+            <textarea id="edu-1" name="education" rows="3" placeholder="BSc Computer Science — University — 2023"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Experience</legend>
+            <label for="exp-1">Experience (one per line: role — company — dates)</label>
+            <textarea id="exp-1" name="experience" rows="4" placeholder="Frontend Developer — Acme — 2022–2024"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Skills & Projects</legend>
+            <label for="skills">Skills (comma separated)</label>
+            <input id="skills" name="skills" type="text" placeholder="HTML, CSS, JavaScript">
+
+            <label for="projects">Projects / Certifications (optional)</label>
+            <textarea id="projects" name="projects" rows="3"></textarea>
+          </fieldset>
+
+          <div style="margin-top:1rem;">
+            <button type="submit" class="download-btn">Render CV</button>
+            <button type="button" id="edit-btn" class="download-btn" style="background:#888; margin-left:0.5rem; display:none;">Edit</button>
+            <button type="button" id="clear-btn" class="download-btn" style="background:#b33; margin-left:0.5rem;">Clear</button>
+          </div>
+        </form>
+
+        <hr>
+        <section aria-label="CV preview" class="cv-section" id="cv-preview" hidden>
+          <header class="cv-header">
+            <h2 id="cv-name">Full Name</h2>
+            <p id="cv-contact">email • phone</p>
+            <p id="cv-summary"></p>
+          </header>
+
+          <div class="cv-block">
+            <h3>Education</h3>
+            <ul id="cv-education"></ul>
+          </div>
+
+          <div class="cv-block">
+            <h3>Experience</h3>
+            <ul id="cv-experience"></ul>
+          </div>
+
+          <div class="cv-block">
+            <h3>Skills</h3>
+            <p id="cv-skills"></p>
+          </div>
+
+          <div class="cv-block" id="cv-projects-block" style="display:none;">
+            <h3>Projects & Certifications</h3>
+            <ul id="cv-projects"></ul>
+          </div>
+
+          <div class="cv-download">
+            <a id="download-link" class="download-btn" href="#" download="CV.html">Download HTML</a>
+          </div>
+        </section>
+      </section>
+
+      <footer>
+        <p><small>Last updated: 11 November 2025.</small></p>
+        <p><small>Disclaimer: This site is for educational use. AI-assisted content used for research and drafting (see research page).</small></p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- load the cv script (adjust path if js folder is elsewhere) -->
+  <script src="cv.js"></script>
+</body>
+</html>

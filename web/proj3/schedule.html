@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="dark-toggle" hidden>
+  <label for="dark-toggle" class="dark-mode-toggle">🌙</label>
+
+  <!-- Top Navigation -->
+  <header class="topnav">
+    <nav>
+      <ul>
+        <li>
+          <details>
+            <summary>Related Topics ▾</summary>
+            <ul class="dropdown-content">
+              <li><a href="css-history.html">CSS Extra Info</a></li>
+              <li><a href="js-history.html">JS Extra Info</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="events.html">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page">
+    <main>
+      <a href="../index.html" class="back-button">← Back to Project Hub</a>
+
+      <article>
+        <h2>Class Schedule for Fall 2025–2026</h2>
+
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th>9:00 – 10:15</th>
+              <td></td>
+              <td><a href="#net-arch" class="course-link">Network Arch & Protocols</a></td>
+              <td></td>
+              <td><a href="#net-arch" class="course-link">Network Arch & Protocols</a></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <th>10:15 – 11:30</th>
+              <td></td>
+              <td><a href="#digital-elec" class="course-link">Digital Electronics</a></td>
+              <td></td>
+              <td><a href="#digital-elec" class="course-link">Digital Electronics</a></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <th>12:00 – 1:15</th>
+              <td><a href="#electronics" class="course-link">Electronics</a></td>
+              <td><a href="#numerical" class="course-link">Numerical Analysis</a></td>
+              <td></td>
+              <td><a href="#numerical" class="course-link">Numerical Analysis</a></td>
+              <td><a href="#electronics" class="course-link">Electronics</a></td>
+            </tr>
+
+            <tr>
+              <th>12:00 – 3:00</th>
+              <td></td>
+              <td></td>
+              <td><a href="#net-arch-lab" class="course-link">Network Arch & Protocols Lab</a></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <th>3:00 – 4:15</th>
+              <td><a href="#web-prog" class="course-link">Web Programming</a></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a href="#web-prog" class="course-link">Web Programming</a></td>
+            </tr>
+
+            <tr>
+              <th>4:15 – 6:00</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a href="#dig-lab" class="course-link">Digital Circuits Lab</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </article>
+
+      <!-- ================= -->
+      <!-- COURSE DESCRIPTIONS -->
+      <!-- ================= -->
+
+      <div id="net-arch" class="topic-card">
+        <a href="#" class="card-close">✕</a>
+        <h3>Network Architecture & Protocols</h3>
+        <p>Study of OSI/TCP-IP models, packet routing, switching, encapsulation, addressing, transport protocols, and LAN/WAN design.</p>
+        <a href="syllabi/net-arch.pdf" download class="download-btn">📄 Download Syllabus</a>
+      </div>
+
+      <div id="digital-elec" class="topic-card">
+        <a href="#" class="card-close">✕</a>
+        <h3>Digital Electronics</h3>
+        <p>Boolean algebra, logic gates, combinational circuits, counters, registers, sequential logic, and digital system design.</p>
+        <a href="syllabi/digital-electronics.pdf" download class="download-btn">📄 Download Syllabus</a>
+      </div>
+
+      <div id="electronics" class="topic-card">
+        <a href="#" class="card-close">✕</a>
+        <h3>Electronics</h3>
+        <p>DC/AC analysis, diodes, transistors, operational amplifiers, filters, and electronic components.</p>
+        <a href="syllabi/electronics.pdf" download class="download-btn">📄 Download Syllabus</a>
+      </div>
+
+      <div id="numerical" class="topic-card">
+        <a href="#" class="card-close">✕</a>
+        <h3>Numerical Analysis</h3>
+        <p>Numerical solving of equations, interpolation, differentiation, integration, and error handling techniques.</p>
+        <a href="syllabi/numerical.pdf" download class="download-btn">📄 Download Syllabus</a>
+      </div>
+
+      <div id="web-prog" class="topic-card">
+        <a href="#" class="card-close">✕</a>
+        <h3>Web Programming</h3>
+        <p>HTML, CSS, JavaScript, API usage, forms, responsive design, and introductory server-side programming.</p>
+        <a href="syllabi/web-programming.pdf" download class="download-btn">📄 Download Syllabus</a>
+      </div>
+
+      <div id="net-arch-lab" class="topic-card">
+        <a href="#" class="card-close">✕</a>
+        <h3>Network Architecture & Protocols Lab</h3>
+        <p>Packet sniffing, routing table setup, VLANs, switching labs, and protocol analysis using real tools.</p>
+        <a href="syllabi/net-arch-lab.pdf" download class="download-btn">📄 Download Syllabus</a>
+      </div>
+
+      <div id="dig-lab" class="topic-card">
+        <a href="#" class="card-close">✕</a>
+        <h3>Digital Circuits Lab</h3>
+        <p>Hands-on design with logic gates, flip-flops, counters, breadboards, digital ICs, and testing equipment.</p>
+        <a href="syllabi/digital-circuits-lab.pdf" download class="download-btn">📄 Download Syllabus</a>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>AI-assisted in formatting; content and schedule verified by Carlos Harb.</p>
+    <p><small>Last updated: 6 November 2025.</small></p>
+  </footer>
+
+</body>
+</html>

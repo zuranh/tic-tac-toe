@@ -1,0 +1,115 @@
+<script defer src="events.js"></script>
+<link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Web Events Catalog — Semantic Web Primer</title>
+  <meta name="description" content="Browser events list with names, categories, descriptions, tags, and documentation links.">
+</head>
+
+<body>
+
+  <!-- 🌙 Dark Mode Toggle -->
+  <input type="checkbox" id="dark-toggle" hidden>
+  <label for="dark-toggle" class="dark-mode-toggle">🌙</label>
+
+  <!-- 🔹 TOP NAV -->
+  <header class="topnav">
+    <nav>
+      <ul>
+        <li>
+          <details>
+            <summary>Related Topics ▾</summary>
+            <ul class="dropdown-content">
+              <li><a href="css-history.html">CSS Extra Info</a></li>
+              <li><a href="js-history.html">JS Extra Info</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+         <li><a href="events.html">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE WRAPPER -->
+  <div class="page">
+
+    <!-- 🔹 LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <h1>Semantic Web Primer</h1>
+      <nav>
+        <ol>
+          <li><a href="../index-css.html">Home</a></li>
+          <li><a href="../history-css.html">History of the Web</a></li>
+          <li><a href="../security-css.html">Security on the Web</a></li>
+          <li><a href="../mobile-first-css.html">Mobile-First Development</a></li>
+          <li><a href="../stats-css.html">Internet Stats</a></li>
+          <li><a href="../references-css.html">References</a></li>
+          <li><a href="../arabic-css.html">الذكاء الاصطناعي</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <a href="../index.html" class="back-button">← Back to Project Hub</a>
+
+      <section class="topic-card" style="margin-top:1rem;">
+        <h2>Web Events Catalog</h2>
+        <p>
+          Browse the most common browser events. Use the search bar or category filter below.
+        </p>
+
+        <!-- FILTER BAR -->
+        <div class="filter-row" style="margin:1rem 0;">
+          <div class="filter-item">
+            <label for="search">Search</label>
+            <input id="search" placeholder="search events or tags">
+          </div>
+
+          <div class="filter-item">
+            <label for="category">Category</label>
+            <select id="category">
+              <option value="">All</option>
+              <option>Window</option>
+              <option>Mouse</option>
+              <option>Keyboard</option>
+              <option>Form</option>
+              <option>Clipboard</option>
+              <option>Drag & Drop</option>
+              <option>Touch</option>
+              <option>Pointer</option>
+              <option>Media</option>
+              <option>Animation/Transition</option>
+              <option>DOM</option>
+              <option>Focus</option>
+            </select>
+          </div>
+
+          <button id="clear-filter" class="download-btn" style="background:#555;color:white;">
+            Clear
+          </button>
+        </div>
+
+        <!-- EVENT LIST -->
+        <ul id="events-list" class="events-ul" aria-live="polite"></ul>
+      </section>
+      <article>
+
+      <footer style="margin-top:2rem;">
+        <p><small>Last updated: 11 November 2025.</small></p>
+        <p><small>Disclaimer: Educational use only. AI-assisted content referenced in research pages.</small></p>
+      </footer>
+    </main>
+
+  </div>
+
+</body>
+</html>
